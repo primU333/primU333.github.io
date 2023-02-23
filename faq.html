@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+  <ul class="faq-list">
+    <li class="faq-item">
+      <div class="faq-question">
+        <h3>What is Lorem Ipsum?</h3>
+        <button class="faq-arrow"></button>
+      </div>
+      <div class="faq-answer">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      </div>
+    </li>
+    <li class="faq-item">
+      <div class="faq-question">
+        <h3>Where does it come from?</h3>
+        <button class="faq-arrow"></button>
+      </div>
+      <div class="faq-answer">
+        <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
+      </div>
+    </li>
+    <li class="faq-item">
+      <div class="faq-question">
+        <h3>Why do we use it?</h3>
+        <button class="faq-arrow"></button>
+      </div>
+      <div class="faq-answer">
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+<style>
+ .faq-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+.faq-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question h3 {
+  margin: 0;
+}
+.faq-arrow {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url("https://image.flaticon.com/icons/svg/130/130932.svg");
+  background-size: cover;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.faq-arrow.active {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.faq-answer p {
+  margin: 0;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+</style>
+
+<script>
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach((item) => {
+  const question = item.querySelector('.faq-question');
+  const arrow = item.querySelector('.faq-arrow');
+
+  question.addEventListener('click', () => {
+    item.classList.toggle('active');
+    arrow.classList.toggle('active');
+  });
+});
+               
+</script>
+</body>
+</script>
+</html>
